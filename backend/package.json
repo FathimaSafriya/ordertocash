@@ -1,0 +1,28 @@
+{
+  "name": "credit-cockpit-backend",
+  "version": "1.0.0",
+  "description": "AI-Powered Credit Release Cockpit Backend with SAP S/4HANA Integration Architecture",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node src/server.js",
+    "test": "node tests/businessRules.test.js"
+  },
+  "keywords": [
+    "sap",
+    "s4hana",
+    "order-to-cash",
+    "o2c",
+    "credit-management",
+    "ai",
+    "express"
+  ],
+  "author": "Antigravity",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  }
+}

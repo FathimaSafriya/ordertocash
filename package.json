@@ -1,0 +1,27 @@
+{
+  "name": "ai-credit-release-cockpit",
+  "version": "1.0.0",
+  "description": "AI-Powered Credit Release Cockpit for SAP Order-to-Cash (O2C) - Single Deployable Unit",
+  "main": "backend/src/server.js",
+  "scripts": {
+    "build": "npm --prefix frontend install && npm --prefix frontend run build && npm --prefix backend install",
+    "start": "node backend/src/server.js",
+    "install:all": "npm install --prefix backend && npm install --prefix frontend",
+    "test": "node backend/tests/businessRules.test.js"
+  },
+  "keywords": [
+    "sap",
+    "s4hana",
+    "order-to-cash",
+    "o2c",
+    "credit-management",
+    "ai",
+    "express",
+    "react"
+  ],
+  "author": "Shafeek Rahman",
+  "license": "ISC",
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
