@@ -42,11 +42,16 @@ app.get('/api/health', (req, res) => {
   });
 });
 
-// API Routes
+// API Routes (mounted with and without /api prefix for serverless compatibility)
 app.use('/api/auth', authRoutes);
 app.use('/api/orders', orderRoutes);
 app.use('/api/dashboard', dashboardRoutes);
 app.use('/api/customers', customerRoutes);
+
+app.use('/auth', authRoutes);
+app.use('/orders', orderRoutes);
+app.use('/dashboard', dashboardRoutes);
+app.use('/customers', customerRoutes);
 
 // Unmatched API 404 Route Handler
 app.use('/api/*', (req, res) => {
