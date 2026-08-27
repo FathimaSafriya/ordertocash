@@ -666,3 +666,221 @@ button {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+/* ==============================================================================
+   MOBILE & TABLET RESPONSIVE STYLES (iOS / Android / Phone Optimization)
+   ============================================================================== */
+
+@media (max-width: 992px) {
+  .navbar {
+    padding: 10px 18px;
+  }
+  .main-content {
+    padding: 16px 18px 32px;
+  }
+  .kpi-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Navbar Optimization */
+  .navbar {
+    padding: 10px 14px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .navbar-brand {
+    gap: 10px;
+  }
+
+  .navbar-logo {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+
+  .navbar-title h1 {
+    font-size: 15px;
+  }
+
+  .navbar-title span {
+    display: none; /* Hide long subtitle on phones */
+  }
+
+  .navbar-meta {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--sap-border-subtle);
+    padding-top: 8px;
+    margin-top: 2px;
+  }
+
+  .navbar-meta > div:last-child {
+    border-left: none !important;
+    padding-left: 0 !important;
+  }
+
+  .mode-badge {
+    padding: 4px 8px;
+    font-size: 11px;
+  }
+
+  /* Main Container */
+  .main-content {
+    padding: 12px 12px 32px;
+  }
+
+  /* Page Headers */
+  .page-header-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .page-title {
+    font-size: 18px;
+  }
+
+  .page-subtitle {
+    font-size: 12px;
+  }
+
+  /* KPI Cards Grid: 2 clean columns on phone */
+  .kpi-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .kpi-card {
+    padding: 12px 14px;
+  }
+
+  .kpi-value {
+    font-size: 19px !important;
+  }
+
+  .kpi-label {
+    font-size: 10px;
+  }
+
+  .kpi-subtext {
+    font-size: 10px;
+  }
+
+  /* Toolbar & Filter Tabs: horizontal scroll strip on mobile */
+  .cockpit-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .filter-tabs {
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    padding: 4px 2px;
+    max-width: 100%;
+    scrollbar-width: none;
+  }
+
+  .filter-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filter-tab {
+    flex-shrink: 0;
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .search-box {
+    width: 100%;
+    min-width: unset;
+  }
+
+  /* Smooth horizontal swipe for tables on phones */
+  .table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 0 -4px;
+    padding: 0 4px;
+  }
+
+  .sap-table th, 
+  .sap-table td {
+    padding: 10px 12px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  /* Panel Cards */
+  .panel-card {
+    margin-bottom: 16px;
+    border-radius: var(--radius-md);
+  }
+
+  .panel-card-header {
+    padding: 12px 14px;
+  }
+
+  .panel-card-body {
+    padding: 14px;
+  }
+
+  /* Modals: bottom-sheet appearance on phone */
+  .modal-overlay {
+    padding: 12px;
+    align-items: flex-end;
+  }
+
+  .modal-container {
+    width: 100%;
+    max-width: 100%;
+    max-height: 90vh;
+    border-radius: 16px 16px 0 0;
+    animation: modalSlideUp 0.25s ease-out;
+  }
+
+  @keyframes modalSlideUp {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+  }
+
+  /* Toast Notifications on Mobile */
+  .toast-container {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+  }
+
+  .toast {
+    min-width: unset;
+    width: 100%;
+    padding: 10px 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .kpi-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .navbar-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .btn {
+    font-size: 12px;
+    padding: 7px 12px;
+  }
+}
